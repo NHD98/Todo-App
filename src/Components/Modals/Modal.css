@@ -1,0 +1,73 @@
+.modal {
+  width: 400px;
+  height: 150px;
+}
+
+.modal-content {
+  padding: 20px;
+  border: 3px solid #808080;
+  width: 100%;
+  height: 100%;
+}
+
+.radio-button {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-header-wrapper {
+  margin-top: 0px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #808080;
+  margin-bottom: 20px;
+}
+
+.modal-header {
+  display: inline-block;
+  text-transform: uppercase;
+  color: #547df4;
+  margin: 0;
+}
+
+.modal-header-right {
+  float: right;
+}
+
+.task-input-wrapper {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.task-input {
+  width: 100%;
+  height: 20px;
+}
+
+.button-wrapper {
+  float: right;
+}
+
+.btn-confirm {
+  border: 1px solid #5e60f9;
+  border-radius: 3px;
+  width: 80px;
+  height: 30px;
+  font-size: 15px;
+}
+
+.d-hiden {
+  display: none;
+}
+
+.mr-10 {
+  margin-right: 10px;
+}
+
+.btn-save {
+  background-color: #5e60f9;
+  color: #ffffff;
+}
+
+.btn-cancel {
+  color: #6a5eb4;
+}

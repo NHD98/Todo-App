@@ -1,0 +1,36 @@
+.task-wrapper {
+  margin-bottom: 20px;
+  border: 1px solid #90ee90;
+  padding: 10px;
+}
+
+.task-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.task-detail {
+  width: 70%;
+}
+
+.btn {
+  border: 1px solid;
+  border-radius: 10px;
+  height: 25px;
+  width: 50px;
+  color: #ffffff;
+}
+
+.btn-right {
+  margin-left: 5px;
+}
+
+.btn-red {
+  border-color: #ff0000;
+  background-color: #ff0000;
+}
+
+.btn-blue {
+  border-color: #0000ff;
+  background-color: #0000ff;
+}
