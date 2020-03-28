@@ -1,10 +1,27 @@
 import React from 'react';
 import 'font-awesome/css/font-awesome.min.css';
 import './Modal.css';
-
+import $ from 'jquery';
 class Modal extends React.Component {
   closeModal(event) {
-    console.log(event.target.outerHTML);
+    const idModal = this.props.id;
+    $(`#${idModal}`).css('display', 'none');
+  }
+  saveTask() {
+    var taskType;
+    $("input[name='type']").each((index, item) => {
+      if (item.checked)
+        taskType = item.value;
+    });
+    const taskContent = $('#task-input').val();
+    const time = new Date();
+    const newTask = {
+      task: taskContent,
+      time: `${time.getDate()}/${time.getMonth()}/${time.getFullYear()}, ${time.getHours()}:${time.getMinutes()}:${time.getSeconds()}`
+    }
+    this.props.createNewTask(newTask, taskType);
+    $('#task-input').val('');
+    this.closeModal();
   }
   render() {
     return (
@@ -29,11 +46,11 @@ class Modal extends React.Component {
             </div>
           </div>
           <div className='task-input-wrapper'>
-            <input className='task-input' type="text" placeholder='Enter your task' />
+            <input id='task-input' className='task-input' type="text" placeholder='Enter your task' />
           </div>
           <div className='button-wrapper'>
-            <button className='btn-confirm btn-save mr-10'>Save</button>
-            <button className='btn-confirm btn-cancel'>Cancel</button>
+            <button onClick={() => this.saveTask()} className='btn-confirm btn-save mr-10'>Save</button>
+            <button onClick={(e) => this.closeModal(e)} className='btn-confirm btn-cancel'>Cancel</button>
           </div>
         </div>
       </div>
